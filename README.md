@@ -25,17 +25,29 @@ To get all the message you just need to follow https://messenger-api-nb.herokuap
 <ul>
 <li>Add a name of the Sender to the URL after the '/' (e.g. https://messenger-api-nb.herokuapp.com/Avi)</li>
 <li>The body of the request should contain the following keys: "receiver", "subject", "message"</li>
+Note: method POST
 </ul>
 
 <h4>Get all messages of a specific user</h4>
 <ul>
 <li>Add a name of the Sender to the URL after the '/' (e.g. https://messenger-api-nb.herokuapp.com/Avi)</li>
 for now simple logic was implemented - it is possible add another argument that will check if the provided user name should be Sender or Reciever. The same logic I used for Retrieving specific message. You can choose the role of the user there.
+Note: method GET
 </ul>
 
 <h4>Get all undread messages for a specific user</h4>
 <ul>
-<li>Add a name of the Sender to the URL after the '/' (e.g. https://messenger-api-nb.herokuapp.com/Avi)</li>
+<li>Follow the link https://messenger-api-nb.herokuapp.com/unread-messages)</li>
 <li>The body of the request should contain the following keys: "status", "sender"</li>
 Also possible to add the logic from Retrieving specific message to have a choice of the role (sender, receiver)
 </ul>
+
+<h4>Read message (will return the text of a single message)<h4>
+ <ul>
+<li>Follow the link (e.g. https://messenger-api-nb.herokuapp.com/single-message)</li>
+<li>The body of the request should contain the following key: "subject"</li>
+</ul>
+  
+<h4>Delete message (as sender or as a receiver)</h4>
+<li>Add a name of the Sender to the URL after the '/' https://messenger-api-nb.herokuapp.com/Gabi</li>
+<li>The body of the request should contain the following keys: "subject", "role"
