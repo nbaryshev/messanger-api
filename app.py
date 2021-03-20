@@ -88,11 +88,11 @@ class Read_Message(Resource):
 class Unread_Messages(Resource):
     parser = reqparse.RequestParser()
     parser.add_argument('status', type=str, required=False, help='Status of the message')
+    parser.add_argument('sender', type=str, required=False, help='Sender of the message')
 
     def get(self):
         args = Unread_Messages.parser.parse_args()
-        print(args['status'])
-        items = Messages.get_unread_messages(args['status'])
+        items = Messages.get_unread_messages(args['status'], args['sender'])
         if items:
             return {'Messages': list(map(lambda x: x.json(), items))}
         else:

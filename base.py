@@ -54,8 +54,8 @@ class Messages(db.Model):
         return message.json()
 
     @classmethod
-    def get_unread_messages(cls, status):
-        return cls.query.filter_by(status=status).all()
+    def get_unread_messages(cls, status, sender):
+        return cls.query.filter_by(status=status, sender=sender).all()
 
     # Method to save data to database
     def save_to(self):
