@@ -2,7 +2,7 @@
 Messenger API with ability to create, retrieve, delete messages
 
 <h2>Overview</h2>
-Project stored on Heroku: https://messenger-api-nb.herokuapp.com/
+Project stored on Heroku: https://messenger-api-nb.herokuapp.com/<br>
 You can test API with Postman: https://www.getpostman.com/collections/ee33061c4d4d9d6ff113
 
 <h2>Using this API user can</h2>
